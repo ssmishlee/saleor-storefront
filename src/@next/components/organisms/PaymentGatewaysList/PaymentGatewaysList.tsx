@@ -74,13 +74,12 @@ const PaymentGatewaysList: React.FC<IProps> = ({
                     name="payment-method"
                     value="dummy"
                     checked={checked}
-                    onChange={() =>
-                      selectPaymentGateway && selectPaymentGateway(id)
+                    onChange={() =>selectPaymentGateway && selectPaymentGateway(id)
                     }
                     customLabel={true}
                   >
                     <span data-cy="checkoutPaymentGatewayDummyName">
-                      {name}
+                      Cash On Delivery(COD)
                     </span>
                   </Radio>
                 </S.Tile>
@@ -110,7 +109,7 @@ const PaymentGatewaysList: React.FC<IProps> = ({
                     customLabel={true}
                   >
                     <span data-cy="checkoutPaymentGatewayStripeName">
-                      {name}
+                      Debit or Credit Card
                     </span>
                   </Radio>
                 </S.Tile>

@@ -27,9 +27,13 @@ const CheckoutShipping: React.FC<IProps> = ({
         }}
         enableReinitialize={true}
         onSubmit={(values, { setSubmitting }) => {
-          if (selectShippingMethod && values.shippingMethod) {
-            selectShippingMethod(values.shippingMethod);
+          // right now it's free shipping always this has to be changed once new shipping methods are introduced.
+          if(selectShippingMethod && shippingMethods && shippingMethods[0] ){
+            selectShippingMethod(shippingMethods[0].id);
           }
+          // if (selectShippingMethod && values.shippingMethod) {
+          //   selectShippingMethod(values.shippingMethod);
+          // }
           setSubmitting(false);
         }}
       >
@@ -48,18 +52,19 @@ const CheckoutShipping: React.FC<IProps> = ({
               onSubmit={handleSubmit}
             >
               {shippingMethods.map(({ id, name, price }, index) => {
+                // setFieldValue("shippingMethod", id);
                 const checked =
                   !!values.shippingMethod && values.shippingMethod === id;
-
                 return (
                   <S.Tile checked={checked} key={id}>
                     <Radio
                       data-cy={`checkoutShippingMethodOption${index}Input`}
                       name="shippingMethod"
                       value={id}
-                      checked={checked}
+                      checked={true}
                       customLabel={true}
-                      onChange={() => setFieldValue("shippingMethod", id)}
+                      readOnly={true}
+                      // onChange={() => setFieldValue("shippingMethod", id)}
                     >
                       <span
                         data-cy={`checkoutShippingMethodOption${index}Name`}
