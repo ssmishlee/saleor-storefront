@@ -79,7 +79,7 @@ const PaymentGatewaysList: React.FC<IProps> = ({
                     customLabel={true}
                   >
                     <span data-cy="checkoutPaymentGatewayDummyName">
-                      Cash On Delivery(COD)
+                      COD
                     </span>
                   </Radio>
                 </S.Tile>

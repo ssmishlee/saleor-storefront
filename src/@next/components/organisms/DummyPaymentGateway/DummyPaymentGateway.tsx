@@ -38,27 +38,27 @@ const DummyPaymentGateway: React.FC<IProps> = ({
         isValid,
       }) => (
         <S.Form id={formId} ref={formRef} onSubmit={handleSubmit}>
-          {statuses.map(({ token, label }) => {
-            return (
-              <S.Status key={token}>
+          {/* {statuses.map(({ token, label }) => { 
+            return (*/}
+              <S.Status key={statuses[0].token}>
                 <Radio
-                  data-cy={`checkoutPaymentGatewayDummyStatus${token}Input`}
-                  key={token}
+                  data-cy={`checkoutPaymentGatewayDummyStatus${statuses[0].token}Input`}
+                  key={statuses[0].token}
                   type="radio"
                   name="status"
-                  value={token}
-                  checked={values.status === token}
+                  value={statuses[0].token}
+                  checked={values.status === statuses[0].token}
                   onChange={handleChange}
                 >
                   <span
-                    data-cy={`checkoutPaymentGatewayDummyStatus${token}Label`}
+                    data-cy={`checkoutPaymentGatewayDummyStatus${statuses[0].token}Label`}
                   >
-                    {label}
+                    Pay On Delivery
                   </span>
                 </Radio>
               </S.Status>
-            );
-          })}
+            {/* );
+          })} */}
         </S.Form>
       )}
     </Formik>

@@ -48,11 +48,7 @@ const CheckoutReviewSubpageWithRef: RefForwardingComponent<
 
   const getPaymentMethodDescription = () => {
     if (payment?.gateway === "mirumee.payments.dummy") {
-      return `Dummy: ${
-        dummyStatuses.find(
-          status => status.token === selectedPaymentGatewayToken
-        )?.label
-      }`;
+      return 'Cash on delivery';
     } else if (payment?.creditCard) {
       return `Ending in ${payment?.creditCard.lastDigits}`;
     }
