@@ -136,6 +136,7 @@ export interface UserDetails_me {
    */
   id: string;
   email: string;
+  phone: string;
   firstName: string;
   lastName: string;
   isStaff: boolean;

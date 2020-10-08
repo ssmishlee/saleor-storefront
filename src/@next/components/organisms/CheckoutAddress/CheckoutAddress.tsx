@@ -36,7 +36,7 @@ const CheckoutAddress: React.FC<IProps> = ({
           countriesOptions={countries?.filter(filterNotEmptyArrayItems)}
           userId={userId}
           errors={errors}
-          onSelect={(address, id) => setShippingAddress(address, undefined, id)}
+          onSelect={(address, id) => setShippingAddress(address, undefined, undefined, id)}
           newAddressFormId={newAddressFormId}
         />
       ) : (
@@ -48,7 +48,7 @@ const CheckoutAddress: React.FC<IProps> = ({
             ...checkoutAddress,
             email,
           }}
-          handleSubmit={address => setShippingAddress(address, address?.email)}
+          handleSubmit={address => setShippingAddress(address, address?.email,address?.phone)}
           includeEmail={true}
           errors={errors}
         />
