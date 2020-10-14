@@ -10,6 +10,10 @@ export const PROVIDERS = {
   DUMMY: {
     label: "Dummy",
   },
+  RAZORPAY:{
+    href:"https://checkout.razorpay.com/v1/checkout.js",
+    label: "Razorpay",
+  },
   STRIPE: {
     href: "https://js.stripe.com/v3/",
     label: "Stripe",
