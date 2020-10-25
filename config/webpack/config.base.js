@@ -102,8 +102,8 @@ module.exports = ({ sourceDir, distDir }) => ({
       logo: `${sourceDir}/images/favicon.png`,
       prefix: "images/favicons/",
       favicons: {
-        appName: "Saleor",
-        appDescription: "Storefront for the Saleor e-commerce platform",
+        appName: "mishlee",
+        appDescription: "Storefront for mishlee",
         display: "standalone",
         developerURL: null, // prevent retrieving from the nearest package.json
         background: "#ddd",
@@ -111,7 +111,7 @@ module.exports = ({ sourceDir, distDir }) => ({
       },
     }),
     new webpack.EnvironmentPlugin({
-      API_URI: "http://localhost:8000/graphql/",
+      API_URI: "https://api.mishlee.com/graphql/",
     }),
   ],
   node: {

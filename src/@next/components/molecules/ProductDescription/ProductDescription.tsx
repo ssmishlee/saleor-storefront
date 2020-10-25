@@ -33,7 +33,8 @@ export const ProductDescription: React.FC<IProps> = ({
         >
           DESCRIPTION
         </S.TabTitle>
-        <S.TabTitle
+        {/* hiding the attributes now as not required-19-10-20 */}
+        {/* <S.TabTitle
           active={activeTab === TABS.ATTRIBUTES}
           onMouseEnter={evt => {
             evt.stopPropagation();
@@ -45,7 +46,7 @@ export const ProductDescription: React.FC<IProps> = ({
           }}
         >
           ATTRIBUTES
-        </S.TabTitle>
+        </S.TabTitle> */}
       </S.Tabs>
       {activeTab === TABS.DESCRIPTION &&
         (descriptionJson ? (
@@ -53,7 +54,8 @@ export const ProductDescription: React.FC<IProps> = ({
         ) : (
           <p>{description}</p>
         ))}
-      {activeTab === TABS.ATTRIBUTES && (
+        {/* hiding the attributes now as not required-19-10-20 */}
+      {/* {activeTab === TABS.ATTRIBUTES && (
         <S.AttributeList>
           {attributes &&
             attributes.map((attribute, index) => (
@@ -63,7 +65,7 @@ export const ProductDescription: React.FC<IProps> = ({
               </li>
             ))}
         </S.AttributeList>
-      )}
+      )} */}
     </S.Wrapper>
   );
 };

@@ -67,7 +67,6 @@ const CheckoutAddressSubpageWithRef: RefForwardingComponent<
   const handleSetShippingAddress = async (
     address?: IAddress,
     email?: string,
-    phone?:string,
     userAddressId?: string
   ) => {
     if (!address) {
@@ -76,7 +75,7 @@ const CheckoutAddressSubpageWithRef: RefForwardingComponent<
     }
 
     const shippingEmail = user?.email || email || "";
-    const shippingPhone = user?.phone || phone || "";
+    const shippingPhone = user?.phone || address?.phone || "";
 
     if (!shippingEmail) {
       setErrors([{ field: "email", message: "Please provide email address." }]);

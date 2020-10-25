@@ -1,14 +1,14 @@
 {
-  "name": "saleor-storefront",
-  "description": "A GraphQL-powered, PWA, single-page storefront application for Saleor",
+  "name": "mishlee-storefront",
+  "description": "A GraphQL-powered, PWA, single-page storefront application for mishlee",
   "repository": "https://github.com/mirumee/saleor-storefront",
-  "website": "http://getsaleor.com/",
+  "website": "https://mishlee.com/",
   "logo": "https://mirumee.com/img/opensource_saleor.jpg",
-  "keywords": ["saleor", "e-commerce", "storefront"],
+  "keywords": ["mishlee", "e-commerce", "storefront"],
   "env": {
     "API_URI": {
-      "description": "URI of a running instance of Saleor GraphQL API",
-      "value": "https://pwa.demo.saleor.rocks/graphql/"
+      "description": "URI of a running instance of mishlee GraphQL API",
+      "value": "https://api.mishlee.com/graphql/"
     }
   },
   "buildpacks": [
